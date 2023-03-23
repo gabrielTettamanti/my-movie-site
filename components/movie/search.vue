@@ -61,6 +61,7 @@ search();
         font-size: 18px;
         padding: 5px;
         transition: .5s;
+        outline: none;
         &:focus {
           border: solid 4px $primary-600;
           background-color: $primary-600;
