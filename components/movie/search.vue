@@ -16,10 +16,10 @@ search();
       <input class="movie-search-form-input"  type="text" v-model="query" />
       <button class="movie-search-form-button" >🔎</button>
     </form>
-    <ul style="display: flex; flex-wrap: wrap; gap: 10px; list-style: none">
+    <ul style="" class="movie-search-poster-container">
       <li v-for="movie in movies" :key="movie.imdbID">
         <NuxtLink :to="{ name: 'movies-id', params: { id: movie.imdbID } }">
-          <img :src="movie.Poster" :alt="movie.title" width="100" />
+          <img :src="movie.Poster" :alt="movie.title" class="movie-search-poster" />
         </NuxtLink>
       </li>
     </ul>
@@ -80,6 +80,21 @@ search();
           border: solid 4px $primary-600;
           background-color: $primary-600;
         }
+      }
+    }
+    .movie-search-poster-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      list-style: none;
+      width: 100%;
+      max-width: 1200px;
+      .movie-search-poster {
+        width: 150px;
+        margin: 10px;
       }
     }
   }
