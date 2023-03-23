@@ -24,9 +24,41 @@ useHead({
 });
 </script>
 <template>
-  <div>
-    <pre>
-        {{ data }}
-    </pre>
-  </div>
+  <section class="movie-detail-container">
+    <div class="movie-detail-texts">
+      <h1>{{data.Title}}</h1>
+      <p>{{ data.Plot }}</p>
+    </div>
+    <div class="movie-detail-image-container">
+      <img class="movie-detail-image" :src="data.Poster" :alt="data.Title">
+    </div>
+  </section>
 </template>
+
+<style lang="scss" scoped>
+  .movie-detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 90%;
+    max-width: 1200px;
+    .movie-detail-texts {
+      width: 60%;
+      h1 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+    .movie-detail-image-container {
+      margin: 5%;
+      .movie-detail-image {
+        height: 70vh;
+      }
+    }
+  }
+  </style>
