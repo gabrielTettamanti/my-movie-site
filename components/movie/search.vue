@@ -47,7 +47,7 @@ search();
     margin: auto;
     max-width: 1200px;
     .movie-search-form {
-      margin: 20px;
+      margin: 0px 0px 20px 0px;
       width: 90%;
       max-width: 400px;
       display: flex;
